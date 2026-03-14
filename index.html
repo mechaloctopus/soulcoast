@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soul Coast Dance — The Science of Moving Together</title>
+  <meta name="description" content="Soul Coast Dance: Community dance lessons backed by cutting-edge science. Discover why dancing transforms your brain, body, and life.">
+  <meta name="theme-color" content="#06060b">
+  <meta property="og:title" content="Soul Coast Dance — The Science of Moving Together">
+  <meta property="og:description" content="50+ peer-reviewed studies across 13 domains proving dance transforms your brain, body, and life. The most comprehensive dance-health research database online.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://soulcoast.dance">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+/* ═══════════════════════════════════════════
+   SOUL COAST DANCE — STYLE SYSTEM
+   ═══════════════════════════════════════════ */
+:root {
+  --bg-deep: #06060b;
+  --bg-card: #0e0e16;
+  --bg-card-hover: #141420;
+  --bg-surface: #1a1a28;
+  --accent-warm: #e8734a;
+  --accent-gold: #d4a853;
+  --accent-blue: #7b8cde;
+  --text-primary: #f0ede8;
+  --text-secondary: #9a96a6;
+  --text-muted: #5c586a;
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-accent: rgba(232, 115, 74, 0.3);
+  --glow-warm: rgba(232, 115, 74, 0.15);
+  --glow-blue: rgba(123, 140, 222, 0.1);
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; font-size: 16px; -webkit-font-smoothing: antialiased; }
+body { font-family: var(--font-sans); background: var(--bg-deep); color: var(--text-primary); line-height: 1.7; overflow-x: hidden; }
+#bg-canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+.parallax-section { position: relative; z-index: 1; }
+
+/* NAV */
+#main-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 2.5rem; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); background: rgba(6, 6, 11, 0.6); border-bottom: 1px solid var(--border-subtle); transition: all 0.4s var(--ease-out-expo); }
+#main-nav.scrolled { padding: 0.75rem 2.5rem; background: rgba(6, 6, 11, 0.9); }
+.nav-logo { font-family: var(--font-serif); font-size: 1.35rem; font-weight: 700; color: var(--text-primary); text-decoration: none; letter-spacing: 0.02em; }
+.nav-links { display: flex; align-items: center; gap: 2.5rem; }
+.nav-links a { font-size: 0.85rem; font-weight: 500; color: var(--text-secondary); text-decoration: none; letter-spacing: 0.04em; text-transform: uppercase; transition: color 0.3s; }
+.nav-links a:hover { color: var(--text-primary); }
+.nav-cta { padding: 0.5rem 1.5rem !important; border: 1px solid var(--accent-warm) !important; border-radius: 100px; color: var(--accent-warm) !important; transition: all 0.3s var(--ease-out-expo) !important; }
+.nav-cta:hover { background: var(--accent-warm) !important; color: var(--bg-deep) !important; }
+
+/* HERO */
+#hero { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 6rem 2rem 4rem; position: relative; }
+.hero-content { max-width: 800px; }
+.hero-eyebrow { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent-warm); margin-bottom: 2rem; }
+.hero-title { font-family: var(--font-serif); font-size: clamp(3.5rem, 10vw, 8rem); font-weight: 900; line-height: 0.95; letter-spacing: -0.02em; margin-bottom: 1.5rem; }
+.hero-title .title-line { display: block; }
+.hero-title .accent { color: var(--accent-warm); font-style: italic; }
+.hero-subtitle { font-size: 1.25rem; color: var(--text-secondary); font-weight: 300; margin-bottom: 3rem; }
+.hero-stat { display: inline-flex; align-items: baseline; gap: 0.5rem; flex-wrap: wrap; justify-content: center; margin-bottom: 3rem; padding: 1.5rem 2.5rem; border: 1px solid var(--border-subtle); border-radius: 16px; background: rgba(14, 14, 22, 0.6); backdrop-filter: blur(10px); }
+.stat-number { font-family: var(--font-serif); font-size: 3.5rem; font-weight: 900; color: var(--accent-warm); line-height: 1; }
+.stat-symbol { font-family: var(--font-serif); font-size: 2rem; font-weight: 700; color: var(--accent-warm); }
+.stat-label { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5; max-width: 400px; }
+.hero-cta { display: inline-block; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; color: var(--text-primary); padding: 1rem 2.5rem; border: 1px solid var(--text-muted); border-radius: 100px; transition: all 0.4s var(--ease-out-expo); }
+.hero-cta:hover { border-color: var(--accent-warm); color: var(--accent-warm); box-shadow: 0 0 40px var(--glow-warm); }
+.scroll-indicator { position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); }
+.scroll-line { width: 1px; height: 60px; background: linear-gradient(to bottom, var(--accent-warm), transparent); animation: scrollPulse 2s ease-in-out infinite; }
+
+/* SECTION DIVIDERS & GLOW */
+#science::before, #library::before, #convergence::before { content: ''; display: block; width: 100%; height: 1px; background: linear-gradient(90deg, transparent, var(--border-subtle), rgba(232, 115, 74, 0.15), var(--border-subtle), transparent); }
+#science { background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(232, 115, 74, 0.03) 0%, transparent 60%); }
+#convergence { background: radial-gradient(ellipse 60% 40% at 50% 50%, rgba(123, 140, 222, 0.04) 0%, transparent 70%); }
+#library { background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(212, 168, 83, 0.03) 0%, transparent 60%); }
+#join { background: radial-gradient(ellipse 60% 60% at 50% 50%, rgba(232, 115, 74, 0.05) 0%, transparent 70%); }
+
+/* SECTION HEADERS */
+.section-header { text-align: center; max-width: 700px; margin: 0 auto 4rem; padding-top: 8rem; }
+.section-eyebrow { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase; color: var(--accent-warm); margin-bottom: 1.5rem; }
+.section-title { font-family: var(--font-serif); font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 700; line-height: 1.15; margin-bottom: 1.5rem; }
+.section-title em { color: var(--accent-warm); }
+.section-intro { font-size: 1.05rem; color: var(--text-secondary); line-height: 1.8; }
+
+/* SCIENCE CARDS */
+.science-card { margin-bottom: 1.5rem; border: 1px solid var(--border-subtle); border-radius: 16px; background: var(--bg-card); overflow: hidden; transition: all 0.4s var(--ease-out-expo); }
+.science-card:hover { border-color: rgba(255, 255, 255, 0.1); background: var(--bg-card-hover); }
+.science-card.active { border-color: var(--border-accent); box-shadow: 0 8px 60px var(--glow-warm), 0 0 0 1px var(--border-accent), inset 0 1px 0 rgba(232, 115, 74, 0.1); background: linear-gradient(180deg, rgba(232, 115, 74, 0.04) 0%, var(--bg-card) 30%); }
+.card-header { display: flex; align-items: flex-start; gap: 1.25rem; padding: 2rem 2.5rem; cursor: pointer; user-select: none; transition: background 0.3s; }
+.card-header:hover { background: rgba(255, 255, 255, 0.02); }
+.card-icon { font-size: 2rem; flex-shrink: 0; margin-top: 0.15rem; }
+.card-intro { flex: 1; }
+.card-intro h3 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem; }
+.card-headline { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7; }
+.card-headline strong { color: var(--text-primary); }
+.card-toggle { flex-shrink: 0; margin-top: 0.5rem; color: var(--text-muted); transition: transform 0.5s var(--ease-out-expo), color 0.3s; }
+.science-card.active .card-toggle { transform: rotate(180deg); color: var(--accent-warm); }
+.card-body { max-height: 0; overflow: hidden; transition: max-height 0.6s var(--ease-out-expo); }
+.science-card.active .card-body { max-height: 3000px; }
+.studies-grid { padding: 0 2.5rem 2.5rem; display: grid; gap: 1.25rem; }
+
+/* INDIVIDUAL STUDY */
+.study { position: relative; padding: 1.75rem 2rem; border: 1px solid var(--border-subtle); border-radius: 12px; background: rgba(255, 255, 255, 0.015); transition: all 0.3s var(--ease-out-expo); }
+.study:hover { border-color: rgba(255, 255, 255, 0.08); background: rgba(255, 255, 255, 0.03); transform: translateY(-2px); }
+.study-badge { display: inline-block; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent-warm); padding: 0.25rem 0.75rem; border: 1px solid var(--accent-warm); border-radius: 100px; margin-bottom: 1rem; }
+.study h4 { font-family: var(--font-serif); font-size: 1.1rem; font-weight: 700; line-height: 1.4; margin-bottom: 0.5rem; }
+.study-meta { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.75rem; }
+.study-meta em { color: var(--accent-blue); }
+.study-finding { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1rem; }
+.study-finding strong { color: var(--text-primary); }
+.study-link { display: inline-flex; align-items: center; font-size: 0.8rem; font-weight: 600; color: var(--accent-warm); text-decoration: none; letter-spacing: 0.02em; transition: all 0.3s; }
+.study-link:hover { color: var(--text-primary); letter-spacing: 0.06em; }
+
+/* CONVERGENCE */
+#convergence { padding: 10rem 0; text-align: center; }
+.convergence-block h2 { font-family: var(--font-serif); font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 700; line-height: 1.3; max-width: 700px; margin: 0 auto 3rem; }
+.convergence-block h2 em { color: var(--accent-warm); font-style: italic; }
+.convergence-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; }
+.convergence-tags span { display: inline-block; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-secondary); padding: 0.6rem 1.5rem; border: 1px solid var(--border-subtle); border-radius: 100px; background: var(--bg-card); transition: all 0.3s var(--ease-out-expo); }
+.convergence-tags span:hover { border-color: var(--accent-warm); color: var(--accent-warm); box-shadow: 0 0 30px var(--glow-warm); }
+
+/* BOOKS */
+.books-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; padding-bottom: 6rem; }
+.book-card { padding: 2rem; border: 1px solid var(--border-subtle); border-radius: 16px; background: var(--bg-card); transition: all 0.4s var(--ease-out-expo); display: flex; flex-direction: column; }
+.book-card:hover { border-color: rgba(255, 255, 255, 0.1); transform: translateY(-4px); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); }
+.book-category { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent-blue); margin-bottom: 0.75rem; }
+.book-card h3 { font-family: var(--font-serif); font-size: 1.15rem; font-weight: 700; line-height: 1.35; margin-bottom: 0.5rem; }
+.book-author { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1.25rem; }
+.book-card blockquote { font-size: 0.9rem; font-style: italic; color: var(--text-secondary); line-height: 1.7; padding-left: 1.25rem; border-left: 2px solid var(--accent-warm); margin-bottom: 1.5rem; flex: 1; }
+.book-link { display: inline-flex; font-size: 0.8rem; font-weight: 600; color: var(--accent-warm); text-decoration: none; transition: all 0.3s; }
+.book-link:hover { color: var(--text-primary); }
+
+/* STATS RIBBON */
+.stats-ribbon { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 2rem; padding: 4rem 0; }
+.ribbon-stat { text-align: center; }
+.ribbon-stat .big { font-family: var(--font-serif); font-size: 2.5rem; font-weight: 900; color: var(--accent-warm); line-height: 1.1; display: block; }
+.ribbon-stat .label { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.4rem; display: block; }
+
+/* CLOSING / CTA */
+#join { padding: 8rem 0 6rem; text-align: center; }
+.closing-block h2 { font-family: var(--font-serif); font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 700; line-height: 1.3; margin-bottom: 1.5rem; }
+.closing-block h2 em { color: var(--accent-warm); }
+.closing-block p { font-size: 1rem; color: var(--text-secondary); margin-bottom: 1.5rem; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.8; }
+.closing-link { display: inline-block; font-size: 0.85rem; font-weight: 600; color: var(--accent-warm); text-decoration: none; letter-spacing: 0.04em; transition: all 0.3s; margin-top: 1rem; }
+.closing-link:hover { color: var(--text-primary); }
+
+/* ABOUT */
+#about { padding: 6rem 0; }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; max-width: 900px; margin: 0 auto; }
+.about-card { padding: 2rem; border: 1px solid var(--border-subtle); border-radius: 16px; background: var(--bg-card); }
+.about-card h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin-bottom: 0.75rem; }
+.about-card p { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.8; }
+@media (max-width: 768px) { .about-grid { grid-template-columns: 1fr; } }
+
+/* FOOTER */
+footer { position: relative; z-index: 1; padding: 2rem 0; border-top: 1px solid var(--border-subtle); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-muted); }
+
+/* ANIMATIONS */
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes scrollPulse { 0%, 100% { opacity: 0.3; transform: scaleY(0.6); transform-origin: top; } 50% { opacity: 1; transform: scaleY(1); } }
+
+/* SELECTION & SCROLLBAR */
+::selection { background: var(--accent-warm); color: var(--bg-deep); }
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-deep); }
+::-webkit-scrollbar-thumb { background: var(--text-muted); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-secondary); }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .nav-links { gap: 1.25rem; }
+  .nav-links a:not(.nav-cta) { display: none; }
+  .card-header { padding: 1.5rem; gap: 1rem; }
+  .card-icon { font-size: 1.5rem; }
+  .card-intro h3 { font-size: 1.2rem; }
+  .studies-grid { padding: 0 1.5rem 1.5rem; }
+  .study { padding: 1.25rem 1.5rem; }
+  .hero-stat { padding: 1.25rem 1.5rem; flex-direction: column; align-items: center; gap: 0.25rem; }
+  .stat-label { text-align: center; }
+  .books-grid { grid-template-columns: 1fr; }
+  #main-nav { padding: 1rem 1.5rem; }
+  .section-header { padding-top: 5rem; }
+  #convergence { padding: 6rem 0; }
+  #join { padding: 6rem 0 5rem; }
+}
+@media (max-width: 480px) {
+  .hero-title { font-size: 3rem; }
+  .section-title { font-size: 1.8rem; }
+  .convergence-block h2 { font-size: 1.5rem; }
+}
+  </style>
+</head>
+<body>
+
+  <!-- Three.js 3D Canvas -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Navigation -->
+  <nav id="main-nav">
+    <a href="#" class="nav-logo">Soul Coast</a>
+    <div class="nav-links">
+      <a href="#science">Research</a>
+      <a href="#library">Library</a>
+      <a href="#about">About</a>
+      <a href="https://soulcoast.dance" class="nav-cta">Main Site ↗</a>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- HERO -->
+  <!-- ═══════════════════════════════════════════ -->
+  <header id="hero" class="parallax-section">
+    <div class="hero-content" data-depth="0.3">
+      <p class="hero-eyebrow">The Dance &amp; Health Encyclopedia</p>
+      <h1 class="hero-title">
+        <span class="title-line">Soul</span>
+        <span class="title-line accent">Coast</span>
+        <span class="title-line">Dance</span>
+      </h1>
+      <p class="hero-subtitle">The most comprehensive collection of peer-reviewed research on why dance is the healthiest activity on Earth.</p>
+      <div class="hero-stat">
+        <span class="stat-number" data-count="76">0</span><span class="stat-symbol">%</span>
+        <span class="stat-label">reduction in dementia risk from regular dancing — more than any other activity studied</span>
+      </div>
+      <a href="#science" class="hero-cta">Explore the Evidence</a>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- SCIENCE INTRO -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section id="science" class="parallax-section">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <p class="section-eyebrow">The Dance &amp; Health Encyclopedia</p>
+        <h2 class="section-title">The Science of<br><em>Moving Together</em></h2>
+        <p class="section-intro">
+          50+ peer-reviewed studies across 13 domains of human health. Every claim links directly to the original research. 
+          Dance is the only activity that simultaneously engages movement, music, mindfulness, partnership, touch, community, and expression — each independently proven to transform human health.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- SCIENCE CATEGORIES -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section id="categories" class="parallax-section">
+    <div class="container">
+
+      <!-- ═══ 1. THE DANCING BRAIN ═══ -->
+      <article class="science-card active" data-animate="fade-up">
+        <div class="card-header" role="button" tabindex="0" aria-expanded="true">
+          <div class="card-icon">🧠</div>
+          <div class="card-intro">
+            <h3>The Dancing Brain</h3>
+            <p class="card-headline">Dance is the <strong>only</strong> physical activity proven to reduce dementia risk by 76%. It rewires the brain faster than any conventional exercise.</p>
+          </div>
+          <div class="card-toggle"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div>
+        </div>
+        <div class="card-body"><div class="studies-grid">
+          <div class="study"><div class="study-badge">LANDMARK</div>
+            <h4>Leisure Activities and the Risk of Dementia in the Elderly</h4>
+            <p class="study-meta">Verghese et al. · <em>New England Journal of Medicine</em> · 2003</p>
+            <p class="study-finding">A 21-year study of 469 adults (75+) found frequent dancing reduced dementia risk by <strong>76%</strong> — the greatest reduction of any activity tested, physical or cognitive.</p>
+            <a href="https://www.nejm.org/doi/full/10.1056/NEJMoa022252" target="_blank" rel="noopener" class="study-link">Read the full study →</a>
+          </div>
+          <div class="study">
+            <h4>Dancing or Fitness Sport? Hippocampal Plasticity in Healthy Seniors</h4>
+            <p class="study-meta">Rehfeld et al. · <em>Frontiers in Human Neuroscience</em> · 2017</p>
+            <p class="study-finding">18 months of dance training produced significantly <strong>greater hippocampal volume increases</strong> than conventional fitness training, with superior balance improvements.</p>
+            <a href="https://www.frontiersin.org/journals/human-neuroscience/articles/10.3389/fnhum.2017.00305/full" target="_blank" rel="noopener" class="study-link">Read the full study →</a>
+          </div>
+          <div class="study">
+            <h4>Dance Training Is Superior to Repetitive Physical Exercise in Inducing Brain Plasticity</h4>
+            <p class="study-meta">Rehfeld et al. · <em>PLOS ONE</em> · 2018</p>
+            <p class="study-finding">Dance training produced <strong>broader neuroplasticity benefits</strong> than conventional exercise — combining physical exertion with cognitive demands like spatial navigation, coordination, and improvisation.</p>
+            <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0196636" target="_blank" rel="noopener" class="study-link">Read the full study →</a>
+          </div>
+          <div class="study">
+            <h4>Effects of Dance on Cognitive Function in Older Adults: A Systematic Review</h4>
+            <p class="study-meta">Defined et al. · <em>Complementary Therapies in Medicine</em> · 2021</p>
+            <p class="study-finding">Systematic review: dance <strong>probably improves global cognitive function and executive function</strong> in older adults, with evidence for benefits beyond traditional exercise programs.</p>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/33338209/" target="_blank" rel="noopener" class="study-link">Read the full study →</a>
+          </div>
+          <div class="study">
+            <h4>Effects of Dance Therapy on Cognitive and Mental Health in Adults 55+ with Mild Cognitive Impairment</h4>
+            <p class="study-meta">Huang et al. · <em>BMC Geriatrics</em> · 2023</p>
+            <p class="study-finding">Meta-analysis: dance therapy produces <strong>significant improvements in cognitive function and mental health</strong> in older adults with mild cognitive impairment, suggesting dance as a viable intervention for early-stage neurodegeneration.</p>
+            <a href="https://bmcgeriatr.biomedcentral.com/articles/10.1186/s12877-023-04406-y" target="_blank" rel="noopener" class="study-link">Read the full study →</a>
+          </div>
+        </div></div>
+      </article>
+
+      <!-- ═══ 2. DANCE & MENTAL HEALTH ═══ -->
+      <article class="science-card" data-animate="fade-up">
+        <div class="card-header" role="button" tabindex="0" aria-expanded="false">
+          <div class="card-icon">💚</div>
+          <div class="card-intro">
+            <h3>Dance &amp; Mental Health</h3>
+            <p class="card-headline">Dance <strong>significantly reduces depression and anxiety</strong>, heals trauma, and improves quality of life — with effects comparable to or exceeding conventional therapies.</p>
+          </div>
+          <div class="card-toggle"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div>
+        </div>
+        <div class="card-body"><div class="studies-grid">
+          <div class="study"><div class="study-badge">META-ANALYSIS</div>
+            <h4>Effects of Dance Movement Therapy and Dance on Health-Related Psychological Outcomes</h4>
+            <p class="study-meta">Koch, Kunz, Lykou &amp; Cruz · <em>The Arts in Psychotherapy</em> · 2014</p>
+            <p class="study-finding">Meta-analysis of 23 controlled studies (N=1,078): dance significantly <strong>reduces depression (d=0.36) and anxiety</strong>, and improves quality of life, body image, and interpersonal competence.</p>
+            <a href="https://www.sciencedirect.com/science/article/abs/pii/S0197455613001676" target="_blank" rel="noopener" class="study-link">Read the full study →</a>
+          </div>
+          <div class="study"><div class="study-badge">META-ANALYSIS</div>
+            <h4>Effect of Dancing Interventions on Depression and Anxiety Symptoms in Older Adults</h4>
+            <p class="study-meta">Systematic Review · <em>Behavioral Sciences (MDPI)</em> · 2024</p>
+            <p class="study-finding">Meta-analysis of RCTs: dance interventions produce <strong>statistically significant reductions in both depression and anxiety</strong> in older adults across multiple dance styles and intervention durations.</p>
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10813489/" target="_blank" rel="noopener" class="study-link">Read the full study →</a>
+          </div>
+          <div class="study">
+            <h4>Let's Dance: A Holistic Approach to Treating Veterans With PTSD</h4>
+            <p class="study-meta">Millman et al. · <em>Frontiers in Psychology (PMC)</em> · 2019</p>
+            <p class="study-finding">Pilot study: a dance-class program promoted <strong>well-being, self-confidence, and stress reduction for veterans with PTSD</strong>. Dance holds value as a cathartic, therapeutic act for trauma recovery.</p>
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6366571/" target="_blank" rel="noopener" class="study-link">Read the full study →</a>
+          </div>
+          <div class="study">
+            <h4>Dance/Movement Therapy for Trauma Survivors</h4>
+            <p class="study-meta">American Dance Therapy Association · <em>PMC</em> · 2023</p>
+            <p class="study-finding">Comprehensive review: DMT addresses trauma at the <strong>somatic level where it is stored</strong>, offering pathways to recovery that talk-based therapies alone cannot reach — particularly for complex PTSD and interpersonal trauma.</p>
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9857906/" target="_blank" rel="noopener" class="study-link">Read the full study →</a>
+          </div>
+          <div class="study">
+            <h4>Impact of Dance Therapy on Adults with Psychological Trauma</h4>
+            <p class="study-meta"><em>PMC</em> · 2023</p>
+            <p class="study-finding">Dance therapy shows <strong>significant positive effects on psychological trauma symptoms</strong>, including reduced PTSD severity, improved emotional regulation, and enhanced mind-body integration in trauma survivors.</p>
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10334851/" target="_blank" rel="noopener" class="study-link">Read the full study →</a>
+          </div>
+        </div></div>
+      </article>
+
+      <!-- ═══ 3. WOMEN'S HEALTH & VITALITY ═══ -->
+      <article class="science-card" data-animate="fade-up">
+        <div class="card-header" role="button" tabindex="0" aria-expanded="false">
+          <div class="card-icon">🌸</div>
+          <div class="card-intro">
+            <h3>Women's Health &amp; Vitality</h3>
+            <p class="card-headline">Dance <strong>increases bone mineral density</strong> in postmenopausal women, alleviates menopausal symptoms, boosts self-esteem and body image, and benefits prenatal health.</p>
+          </div>
+          <div class="card-toggle"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div>
+        </div>
+        <div class="card-body"><div class="studies-grid">
+          <div class="study"><div class="study-badge">LANDMARK</div>
+            <h4>The Effects of High-Impact Exercise (Dance) on Bone Mineral Density in Postmenopausal Women</h4>
+            <p class="study-meta">Yu et al. · <em>PMC</em> · 2019</p>
+            <p class="study-finding">24 weeks of aerobic dancing <strong>significantly improved bone mineral density</strong> in postmenopausal women with osteopenia/osteoporosis, reducing fracture risk and improving quality of life.</p>
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6426501/" target="_blank" rel="noopener" class="study-link">Read the full study →</a>
+          </div>
+          <div class="study"><div class="study-badge">SYSTEMATIC REVIEW</div>
+            <h4>The Effectiveness of Dance Interventions on Health Outcomes in Menopausal Women</h4>
+            <p class="study-meta"><em>Healthcare (MDPI)</em> · 2025</p>
+            <p class="study-finding">Systematic review: dance interventions show <strong>promising potential in alleviating menopausal symptoms</strong> including hot flashes, mood disturbances, sleep quality, and overall physical and psychological well-being.</p>
+            <a href="https://www.mdpi.com/2227-9032/13/8/881" target="_blank" rel="noopener" class="study-link">Read the full study →</a>
+          </div>
+          <div class="study">
+            <h4>Dance Enhances Physical Self-Esteem and Reduces Social Physique Anxiety</h4>
+            <p class="study-meta"><em>PMC</em> · 2024</p>
+            <p class="study-finding">Dance interventions <strong>significantly enhance physical self-esteem and self-confidence</strong> while reducing social physique anxiety and negative self-evaluation — particularly beneficial for women navigating body image challenges.</p>
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12174144/" target="_blank" rel="noopener" class="study-link">Read the full study →</a>
+          </div>
+          <div class="study">
+            <h4>Effects of Dance Interventions on Aspects of the Participants' Self</h4>
+            <p class="study-meta">Systematic Review · <em>PMC</em> · 2018</p>
+            <p class="study-finding">Review of dance intervention studies: dance consistently <strong>strengthens self-concept, self-esteem, and body image</strong> across diverse populations, with particular benefits for women and adolescent girls.</p>
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6056677/" target="_blank" rel="noopener" class="study-link">Read the full study →</a>
+          </div>
+          <div class="study">
+            <h4>The Effects of Dance on Maternal Childbirth: A Systematic Review and Meta-Analysis</h4>
+            <p class="study-meta"><em>BMC Pregnancy and Childbirth</em> · 2024</p>
+            <p class="study-finding">Dance during pregnancy and labor is <strong>safe and beneficial for childbirth outcomes</strong>. Prenatal dance training helps women better control their bodies during labor, reducing pain perception and improving delivery experience.</p>
+            <a href="https://bmcpregnancychildbirth.biomedcentral.com/articles/10.1186/s12884-024-07132-4" target="_blank" rel="noopener" class="study-link">Read the full study →</a>
+          </div>
+          <div class="study">
+            <h4>Dance/Movement Therapy Leads to Lower Cortisol Awakening Response</h4>
+            <p class="study-meta"><em>PMC</em> · 2018</p>
+            <p class="study-finding">RCT: Dance/movement therapy significantly <strong>lowered the cortisol awakening response</strong> (a marker of chronic stress) in adults, demonstrating dance's power to regulate the body's primary stress hormone system.</p>
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6243712/" target="_blank" rel="noopener" class="study-link">Read the full study →</a>
+          </div>
+        </div></div>
+      </article>
+
+      <!-- ═══ 4. MEN'S HEALTH & VITALITY ═══ -->
+      <article class="science-card" data-animate="fade-up">
+        <div class="card-header" role="button" tabindex="0" aria-expanded="false">
+          <div class="card-icon">🔥</div>
+          <div class="card-intro">
+            <h3>Men's Health &amp; Vitality</h3>
+            <p class="card-headline">Moderate-intensity dancing reduces <strong>cardiovascular disease mortality more than walking</strong>. Partner dance with music maximally boosts testosterone and lowers cortisol.</p>
+          </div>
+          <div class="card-toggle"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div>
+        </div>
+        <div class="card-body"><div class="studies-grid">
+          <div class="study"><div class="study-badge">LANDMARK</div>
+            <h4>Dancing Participation and Cardiovascular Disease Mortality: A Pooled Analysis</h4>
+            <p class="study-meta">Merom et al. · <em>American Journal of Preventive Medicine</em> · 2016</p>
+            <p class="study-finding">Study of 48,000 people: moderate-intensity dancing was associated with a <strong>46% reduced risk of cardiovascular disease mortality</strong> — to a greater extent than walking. Lifelong adherence and psychosocial benefits may explain the effect.</p>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/26944521/" target="_blank" rel="noopener" class="study-link">Read the full study →</a>
+          </div>
+          <div class="study">
+            <h4>Cardiovascular Benefits of Dance as a Unique Form of Exercise</h4>
+            <p class="study-meta"><em>Heart &amp; Mind</em> · 2025</p>
+            <p class="study-finding">Dance improves <strong>blood pressure, heart rate, oxygen consumption, and multiple cardiovascular risk factors</strong>. It is accessible, culturally modifiable, and uniquely combines aerobic conditioning with social engagement.</p>
+            <a href="https://journals.lww.com/hhmi/fulltext/2025/01000/cardiovascular_benefits_of_dance_as_a_unique_form.9.aspx" target="_blank" rel="noopener" class="study-link">Read the full study →</a>
+          </div>
+          <div class="study">
+            <h4>Emotional and Neurohumoral Responses to Dancing Tango Argentino</h4>
+            <p class="study-meta">Quiroga Murcia et al. · <em>Music and Medicine</em> · 2010</p>
+            <p class="study-finding">Partner dancing with music produces the <strong>greatest decrease in cortisol (stress) and increase in testosterone</strong> compared to dancing alone or without music — demonstrating the unique hormonal benefits of connected, musical partner dance.</p>
+            <a href="https://www.researchgate.net/publication/244920993_Emotional_and_Neurohumoral_Responses_to_Dancing_Tango_Argentino_The_Effects_of_Music_and_Partner" target="_blank" rel="noopener" class="study-link">Read the full study →</a>
+          </div>
+          <div class="study">
+            <h4>Biomolecular Effects of Dance and Dance/Movement Therapy: A Review</h4>
+            <p class="study-meta"><em>American Journal of Dance Therapy (Springer)</em> · 2022</p>
+            <p class="study-finding">Comprehensive review: dance positively modulates <strong>hormones, neurotransmitters, and inflammatory markers</strong> at the molecular level — including cortisol, testosterone, BDNF, serotonin, and endorphins.</p>
+            <a href="https://link.springer.com/article/10.1007/s10465-022-09368-z" target="_blank" rel="noopener" class="study-link">Read the full study →</a>
+          </div>
+        </div></div>
+      </article>
+
+      <!-- ═══ 5. DANCE & ATTRACTION ═══ -->
+      <article class="science-card" data-animate="fade-up">
+        <div class="card-header" role="button" tabindex="0" aria-expanded="false">
+          <div class="card-icon">💃</div>
+          <div class="card-intro">
+            <h3>Dance &amp; Attraction</h3>
+            <p class="card-headline">Dancing ability is an <strong>honest signal of genetic quality and mate fitness</strong>. Across cultures, dance movement is used to evaluate health, strength, coordination, and reproductive potential.</p>
+          </div>
+          <div class="card-toggle"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div>
+        </div>
+        <div class="card-body"><div class="studies-grid">
+          <div class="study"><div class="study-badge">LANDMARK</div>
+            <h4>Male Dance Moves That Catch a Woman's Eye</h4>
+            <p class="study-meta">Neave et al. · <em>Biology Letters</em> · 2011</p>
+            <p class="study-finding">Using motion-capture and avatar technology, researchers identified specific male dance movements — <strong>large, variable movements of the neck and trunk</strong> — that women rate as significantly more attractive, potentially signaling physical strength and coordination.</p>
+            <a href="https://www.researchgate.net/publication/46180954_Male_dance_moves_that_catch_a_woman's_eye" target="_blank" rel="noopener" class="study-link">Read the full study →</a>
+          </div>
+          <div class="study">
+            <h4>Evolution and Functions of Human Dance</h4>
+            <p class="study-meta"><em>Evolution and Human Behavior (ScienceDirect)</em> · 2021</p>
+            <p class="study-finding">Comprehensive evolutionary review: dance evolved as a mechanism for <strong>mate selection, social bonding, and group cohesion</strong>. Sexual Strategies Theory predicts sex-specific dance preferences that research has confirmed.</p>
+            <a href="https://www.sciencedirect.com/science/article/abs/pii/S1090513821000039" target="_blank" rel="noopener" class="study-link">Read the full study →</a>
+          </div>
+          <div class="study">
+            <h4>The Role of Human Body Movements in Mate Selection</h4>
+            <p class="study-meta">Hugill et al. · <em>Evolutionary Psychology</em> · 2010</p>
+            <p class="study-finding">Body movements during dance convey information about <strong>mate quality including health, strength, and developmental stability</strong>. In most societies, both men and women dance to attract partners and express fitness.</p>
+            <a href="https://journals.sagepub.com/doi/10.1177/147470491000800107" target="_blank" rel="noopener" class="study-link">Read the full study →</a>
+          </div>
+          <div class="study">
+            <h4>Men's Physical Strength Is Associated with Women's Perceptions of Dance Attractiveness</h4>
+            <p class="study-meta"><em>Personality and Individual Differences</em> · 2010</p>
+            <p class="study-finding">Women's ratings of men's dance attractiveness <strong>correlate with the dancers' physical strength</strong> — suggesting dance functions as a proxy for evaluating male competitiveness and mate quality.</p>
+            <a href="https://www.sciencedirect.com/science/article/abs/pii/S0191886909001627" target="_blank" rel="noopener" class="study-link">Read the full study →</a>
+          </div>
+          <div class="study">
+            <h4>Social and Nonsocial Synchrony Are Interrelated and Romantically Bonding</h4>
+            <p class="study-meta"><em>Communications Psychology (Nature)</em> · 2024</p>
+            <p class="study-finding">Physiological synchrony between partners is <strong>associated with romantic bonding</strong>. Synchronized movement — the foundation of partner dance — facilitates the neurobiological processes underlying romantic attachment and pair bonding.</p>
+            <a href="https://www.nature.com/articles/s44271-024-00109-1" target="_blank" rel="noopener" class="study-link">Read the full study →</a>
+          </div>
+        </div></div>
+      </article>
+
+      <!-- ═══ 6. CONNECTION & PARTNERSHIP ═══ -->
+      <article class="science-card" data-animate="fade-up">
+        <div class="card-header" role="button" tabindex="0" aria-expanded="false">
+          <div class="card-icon">🤝</div>
+          <div class="card-intro">
+            <h3>Connection &amp; Partnership</h3>
+            <p class="card-headline">The Harvard Study of Adult Development — the <strong>longest-running study of human life (85+ years)</strong> — concludes: relationships are the single greatest predictor of health and happiness.</p>
+          </div>
+          <div class="card-toggle"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div>
+        </div>
+        <div class="card-body"><div class="studies-grid">
+          <div class="study"><div class="study-badge">LANDMARK</div>
+            <h4>The Harvard Study of Adult Development</h4>
+            <p class="study-meta">Waldinger &amp; Schulz · <em>Harvard Medical School</em> · 1938–Present</p>
+            <p class="study-finding">Tracking 724 participants over 85+ years: <strong>the quality of your relationships is the #1 predictor of health and happiness</strong>, surpassing wealth, fame, IQ, and social class.</p>
+            <a href="https://news.harvard.edu/gazette/story/2017/04/over-nearly-80-years-harvard-study-has-been-showing-how-to-live-a-healthy-and-happy-life/" target="_blank" rel="noopener" class="study-link">Read the full study →</a>
+          </div>
+          <div class="study"><div class="study-badge">LANDMARK</div>
+            <h4>Social Relationships and Mortality Risk: A Meta-Analytic Review</h4>
+            <p class="study-meta">Holt-Lunstad, Smith &amp; Layton · <em>PLoS Medicine</em> · 2010</p>
+            <p class="study-finding">Meta-analysis of 148 studies (308,849 participants): <strong>weak social relationships increase mortality risk by 50%</strong> — equivalent to smoking 15 cigarettes per day and exceeding the risk of obesity.</p>
+            <a href="https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1000316" target="_blank" rel="noopener" class="study-link">Read the full study →</a>
+          </div>
+          <div class="study">
+            <h4>The Oxytocinergic System Mediates Synchronized Movement During Dance</h4>
+            <p class="study-meta">Shamay-Tsoory et al. · <em>Scientific Reports (Nature)</em> · 2019</p>
+            <p class="study-finding">The <strong>oxytocin system directly mediates synchronized partner movement</strong> during dance, deepening the social connection that partner dancing creates.</p>
+            <a href="https://www.nature.com/articles/s41598-018-37141-1" target="_blank" rel="noopener" class="study-link">Read the full study →</a>
+          </div>
+          <div class="study">
+            <h4>Dancing with Passion: Interpersonal Relationships and Dance</h4>
+            <p class="study-meta"><em>Psychology of Sport and Exercise (ScienceDirect)</em> · 2020</p>
+            <p class="study-finding">Harmonious passion for social partnered dancing <strong>predicts higher relationship quality</strong> both within and outside the dance community, including improvements in romantic relationships.</p>
+            <a href="https://www.sciencedirect.com/science/article/abs/pii/S1469029219305709" target="_blank" rel="noopener" class="study-link">Read the full study →</a>
+          </div>
+          <div class="study">
+            <h4>Couples Self-Expanding Activities Increase Marital Satisfaction</h4>
+            <p class="study-meta">Aron et al. · <em>Journal of Personality and Social Psychology</em> · 2000</p>
+            <p class="study-finding">Couples who engage in exciting, novel shared activities (like dance) experience <strong>significantly higher relationship quality</strong> than those doing pleasant but familiar activities — demonstrating that shared adventure strengthens bonds.</p>
+            <a href="https://files.blogs.baruch.cuny.edu/wp-content/blogs.dir/7309/files/2019/11/Aron_Norman_Aron_McKenna_Heyman_2000.pdf" target="_blank" rel="noopener" class="study-link">Read the full study →</a>
+          </div>
+        </div></div>
+      </article>
+
+      <!-- ═══ 7. COMMUNITY, RITUAL & BELONGING ═══ -->
+      <article class="science-card" data-animate="fade-up">
+        <div class="card-header" role="button" tabindex="0" aria-expanded="false">
+          <div class="card-icon">🌍</div>
+          <div class="card-intro">
+            <h3>Community, Ritual &amp; Belonging</h3>
+            <p class="card-headline">The world's longest-lived communities share <strong>deep social connection</strong>. Synchronized group movement triggers "collective effervescence" — a neurological state of unity and belonging.</p>
+          </div>
+          <div class="card-toggle"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div>
+        </div>
+        <div class="card-body"><div class="studies-grid">
+          <div class="study"><div class="study-badge">LANDMARK</div>
+            <h4>Blue Zones: Lessons From the World's Longest Lived</h4>
+            <p class="study-meta">Buettner &amp; Skemp · <em>American Journal of Lifestyle Medicine</em> · 2016</p>
+            <p class="study-finding">The world's five longevity hotspots share <strong>9 lifestyle traits</strong> including strong social networks, belonging, and community engagement. Social connection is the common thread.</p>
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6125071/" target="_blank" rel="noopener" class="study-link">Read the full study →</a>
+          </div>
+          <div class="study">
+            <h4>Synchrony and Physiological Arousal Increase Cohesion and Cooperation</h4>
+            <p class="study-meta"><em>PMC</em> · 2018</p>
+            <p class="study-finding">Synchronous group activities (like dance) produce <strong>"collective effervescence" — a shared emotional state that increases group cohesion, cooperation, and prosocial behavior</strong> among participants, even strangers.</p>
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5760525/" target="_blank" rel="noopener" class="study-link">Read the full study →</a>
+          </div>
+          <div class="study">
+            <h4>Dance Synchrony Raises Pain Threshold and Encourages Social Bonding</h4>
+            <p class="study-meta">Tarr, Launay, Cohen &amp; Dunbar · <em>Biology Letters</em> · 2015</p>
+            <p class="study-finding">Synchronized dancing triggers <strong>endorphin release</strong>, raises pain thresholds, and promotes feelings of social closeness and bonding — even among people who have just met.</p>
+            <a href="https://royalsocietypublishing.org/doi/10.1098/rsbl.2015.0767" target="_blank" rel="noopener" class="study-link">Read the full study →</a>
+          </div>
+          <div class="study">
+            <h4>Silent Disco: Dancing in Synchrony Leads to Social Closeness</h4>
+            <p class="study-meta">Tarr, Launay &amp; Dunbar · <em>Evolution and Human Behavior</em> · 2016</p>
+            <p class="study-finding">Group dancing in synchrony elevates pain thresholds and increases <strong>self-reported social closeness among strangers</strong> — demonstrating dance's unique evolutionary power to forge community bonds.</p>
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4985033/" target="_blank" rel="noopener" class="study-link">Read the full study →</a>
+          </div>
+        </div></div>
+      </article>
+
+      <!-- ═══ 8. MOVEMENT AS MEDICINE ═══ -->
+      <article class="science-card" data-animate="fade-up">
+        <div class="card-header" role="button" tabindex="0" aria-expanded="false">
+          <div class="card-icon">💪</div>
+          <div class="card-intro">
+            <h3>Movement as Medicine</h3>
+            <p class="card-headline">One year of aerobic exercise <strong>reverses 1–2 years of age-related brain shrinkage</strong> and floods the brain with growth factors that enhance learning and memory.</p>
+          </div>
+          <div class="card-toggle"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div>
+        </div>
+        <div class="card-body"><div class="studies-grid">
+          <div class="study"><div class="study-badge">LANDMARK</div>
+            <h4>Exercise Training Increases Size of Hippocampus and Improves Memory</h4>
+            <p class="study-meta">Erickson et al. · <em>Proceedings of the National Academy of Sciences</em> · 2011</p>
+            <p class="study-finding">RCT of 120 older adults: aerobic exercise <strong>increased hippocampal volume by 2%</strong>, reversing 1–2 years of age-related loss, with corresponding spatial memory improvements.</p>
+            <a href="https://www.pnas.org/doi/10.1073/pnas.1015950108" target="_blank" rel="noopener" class="study-link">Read the full study →</a>
+          </div>
+          <div class="study">
+            <h4>Exercise and Brain-Derived Neurotrophic Factor: A Meta-Analytic Review</h4>
+            <p class="study-meta">Szuhany, Bugatti &amp; Otto · <em>Journal of Psychiatric Research</em> · 2015</p>
+            <p class="study-finding">Meta-analysis: exercise <strong>significantly increases BDNF</strong> — the brain's key growth factor for learning, memory, and neural plasticity.</p>
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4314337/" target="_blank" rel="noopener" class="study-link">Read the full study →</a>
+          </div>
+        </div></div>
+      </article>
+
+      <!-- ═══ 9. THE POWER OF MUSIC ═══ -->
+      <article class="science-card" data-animate="fade-up">
+        <div class="card-header" role="button" tabindex="0" aria-expanded="false">
+          <div class="card-icon">🎵</div>
+          <div class="card-intro">
+            <h3>The Power of Music</h3>
+            <p class="card-headline">Music activates the brain's dopamine system — the same reward circuitry triggered by food and love. It simultaneously <strong>modulates stress, mood, immunity, and social bonding</strong>.</p>
+          </div>
+          <div class="card-toggle"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div>
+        </div>
+        <div class="card-body"><div class="studies-grid">
+          <div class="study"><div class="study-badge">LANDMARK</div>
+            <h4>Anatomically Distinct Dopamine Release During Peak Emotion to Music</h4>
+            <p class="study-meta">Salimpoor et al. · <em>Nature Neuroscience</em> · 2011</p>
+            <p class="study-finding">Music triggers <strong>dopamine release in the striatum</strong> — the brain's reward center — both during anticipation and experience of musical peaks.</p>
+            <a href="https://www.nature.com/articles/nn.2726" target="_blank" rel="noopener" class="study-link">Read the full study →</a>
+          </div>
+          <div class="study">
+            <h4>The Neurochemistry of Music</h4>
+            <p class="study-meta">Chanda &amp; Levitin · <em>Trends in Cognitive Sciences</em> · 2013</p>
+            <p class="study-finding">Music modulates four neurochemical systems: <strong>dopamine</strong> (reward), <strong>cortisol</strong> (stress), <strong>serotonin</strong> (mood), and <strong>oxytocin</strong> (social bonding).</p>
+            <a href="https://www.cell.com/trends/cognitive-sciences/abstract/S1364-6613(13)00049-1" target="_blank" rel="noopener" class="study-link">Read the full study →</a>
+          </div>
+          <div class="study">
+            <h4>Dance and Stress Regulation: A Multidisciplinary Narrative Review</h4>
+            <p class="study-meta"><em>Psychology of Sport and Exercise (ScienceDirect)</em> · 2025</p>
+            <p class="study-finding">Music, social contact, and movement together modulate <strong>dopamine, oxytocin, and β-endorphin</strong> systems and their interplay with stress regulation — explaining why dance-with-music is uniquely therapeutic.</p>
+            <a href="https://www.sciencedirect.com/science/article/pii/S1469029225000226" target="_blank" rel="noopener" class="study-link">Read the full study →</a>
+          </div>
+        </div></div>
+      </article>
+
+      <!-- ═══ 10. DANCE & AGING ═══ -->
+      <article class="science-card" data-animate="fade-up">
+        <div class="card-header" role="button" tabindex="0" aria-expanded="false">
+          <div class="card-icon">⏳</div>
+          <div class="card-intro">
+            <h3>Dance &amp; Aging</h3>
+            <p class="card-headline">Dance <strong>improves balance, gait, and quality of life in Parkinson's patients</strong> and is being studied as a frontline intervention for age-related cognitive and motor decline.</p>
+          </div>
+          <div class="card-toggle"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div>
+        </div>
+        <div class="card-body"><div class="studies-grid">
+          <div class="study"><div class="study-badge">META-ANALYSIS</div>
+            <h4>The Efficacy of Dance for Improving Motor and Non-Motor Symptoms of Parkinson's Disease</h4>
+            <p class="study-meta"><em>PLOS ONE</em> · 2020</p>
+            <p class="study-finding">Systematic review of RCTs: dance <strong>improves motor symptoms (UPDRS-3), balance, and gait</strong> in Parkinson's patients compared to no intervention, with benefits extending to quality of life.</p>
+            <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0236820" target="_blank" rel="noopener" class="study-link">Read the full study →</a>
+          </div>
+          <div class="study">
+            <h4>Tango and Physiotherapy Interventions in Parkinson's Disease</h4>
+            <p class="study-meta"><em>Scientific Reports (Nature)</em> · 2024</p>
+            <p class="study-finding">Adapted tango <strong>improves postural stability, cognitive function, and quality of life</strong> in PD patients — offering complementary benefits that pharmacological treatments alone cannot achieve.</p>
+            <a href="https://www.nature.com/articles/s41598-024-62786-6" target="_blank" rel="noopener" class="study-link">Read the full study →</a>
+          </div>
+          <div class="study">
+            <h4>Effectiveness of Dance Interventions for Falls Prevention in Older Adults</h4>
+            <p class="study-meta">Green et al. · <em>Age and Ageing</em> · 2024</p>
+            <p class="study-finding">Systematic review and meta-analysis: dance <strong>improves balance and reduces fall risk factors</strong> in older adults while providing an enjoyable and sociable form of exercise.</p>
+            <a href="https://academic.oup.com/ageing/article/53/5/afae104/7679267" target="_blank" rel="noopener" class="study-link">Read the full study →</a>
+          </div>
+          <div class="study">
+            <h4>The Impact of Dance on Mental Health of Older Adults: Systematic Review</h4>
+            <p class="study-meta"><em>Frontiers in Psychology</em> · 2025</p>
+            <p class="study-finding">Dance significantly impacts <strong>anxiety, depression, and cognitive function in aging populations</strong>, operating through parasympathetic activation, social engagement, and neuroplasticity mechanisms.</p>
+            <a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2025.1733911/full" target="_blank" rel="noopener" class="study-link">Read the full study →</a>
+          </div>
+        </div></div>
+      </article>
+
+      <!-- ═══ 11. TOUCH, TRUST & INTIMACY ═══ -->
+      <article class="science-card" data-animate="fade-up">
+        <div class="card-header" role="button" tabindex="0" aria-expanded="false">
+          <div class="card-icon">🫱🏽‍🫲🏻</div>
+          <div class="card-intro">
+            <h3>Touch, Trust &amp; Intimacy</h3>
+            <p class="card-headline">Physical touch activates the brain's orbitofrontal cortex and triggers <strong>oxytocin release</strong>. Partner dance is one of the few socially sanctioned spaces where healthy, consensual touch occurs between adults.</p>
+          </div>
+          <div class="card-toggle"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div>
+        </div>
+        <div class="card-body"><div class="studies-grid">
+          <div class="study">
+            <h4>Perceived Partner Responsiveness Forecasts Behavioral Intimacy Through Touch</h4>
+            <p class="study-meta"><em>PMC</em> · 2022</p>
+            <p class="study-finding">Affectionate touch is central to close relationships. Touch serves as a <strong>social behavior that predicts relationship quality, attachment security, and emotional intimacy</strong>.</p>
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8801651/" target="_blank" rel="noopener" class="study-link">Read the full study →</a>
+          </div>
+          <div class="study">
+            <h4>In Touch with Your Emotions: Oxytocin and Touch Change Social Impressions</h4>
+            <p class="study-meta">Ellingsen et al. · <em>Psychoneuroendocrinology</em> · 2014</p>
+            <p class="study-finding">Physical touch combined with oxytocin <strong>increases perceived attractiveness and trustworthiness</strong>. High frequency of physical contact with a partner predicts elevated oxytocin levels.</p>
+            <a href="https://www.sv.uio.no/psi/english/people/academic/sirigra/ellingsen_oxytocin_pnec2013.pdf" target="_blank" rel="noopener" class="study-link">Read the full study →</a>
+          </div>
+          <div class="study">
+            <h4>Pilot Data on Community Dance for Veterans with PTSD: Predictable Gentle Touch</h4>
+            <p class="study-meta"><em>Journal of Veterans Studies</em> · 2018</p>
+            <p class="study-finding">Community dance including <strong>predictable gentle touch and family involvement</strong> predicts stress reduction and successful community reintegration in veterans with PTSD.</p>
+            <a href="https://journal-veterans-studies.org/articles/abstract/10.21061/jvs.v4i2.68" target="_blank" rel="noopener" class="study-link">Read the full study →</a>
+          </div>
+        </div></div>
+      </article>
+
+      <!-- ═══ 12. MINDFULNESS & EXPRESSION ═══ -->
+      <article class="science-card" data-animate="fade-up">
+        <div class="card-header" role="button" tabindex="0" aria-expanded="false">
+          <div class="card-icon">🧘</div>
+          <div class="card-intro">
+            <h3>Mindfulness &amp; Expression</h3>
+            <p class="card-headline">Eight weeks of mindfulness practice <strong>physically increases grey matter</strong>. Healthy emotional expression strengthens the immune system and reduces physician visits by 50%.</p>
+          </div>
+          <div class="card-toggle"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div>
+        </div>
+        <div class="card-body"><div class="studies-grid">
+          <div class="study"><div class="study-badge">LANDMARK</div>
+            <h4>Mindfulness Practice Leads to Increases in Regional Brain Gray Matter Density</h4>
+            <p class="study-meta">Hölzel et al. · <em>Psychiatry Research: Neuroimaging</em> · 2011</p>
+            <p class="study-finding">Just <strong>8 weeks</strong> of MBSR produced measurable <strong>increases in grey matter density</strong> in brain regions governing learning, memory, self-awareness, compassion, and introspection.</p>
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3004979/" target="_blank" rel="noopener" class="study-link">Read the full study →</a>
+          </div>
+          <div class="study">
+            <h4>Meditation Experience Is Associated with Increased Cortical Thickness</h4>
+            <p class="study-meta">Lazar et al. · <em>Neuroreport</em> · 2005</p>
+            <p class="study-finding">Regular meditation increases <strong>cortical thickness</strong> in brain regions for attention and sensory processing — offsetting age-related thinning.</p>
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC1361002/" target="_blank" rel="noopener" class="study-link">Read the full study →</a>
+          </div>
+          <div class="study">
+            <h4>Effects of Mindfulness on Psychological Health: A Review</h4>
+            <p class="study-meta">Keng, Smoski &amp; Robins · <em>Clinical Psychology Review</em> · 2011</p>
+            <p class="study-finding">Mindfulness <strong>reduces anxiety, depression, and rumination</strong> while increasing positive affect, self-compassion, and quality of life.</p>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/21802619/" target="_blank" rel="noopener" class="study-link">Read the full study →</a>
+          </div>
+          <div class="study">
+            <h4>Emotional and Physical Health Benefits of Expressive Writing</h4>
+            <p class="study-meta">Baikie &amp; Wilhelm · <em>Advances in Psychiatric Treatment</em> · 2005</p>
+            <p class="study-finding">400+ studies: expressive writing <strong>improves immune function, reduces blood pressure, decreases physician visits</strong>, and produces lasting mood improvements.</p>
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3830620/" target="_blank" rel="noopener" class="study-link">Read the full study →</a>
+          </div>
+        </div></div>
+      </article>
+
+      <!-- ═══ 13. PLAY, TRAVEL & EXPLORATION ═══ -->
+      <article class="science-card" data-animate="fade-up">
+        <div class="card-header" role="button" tabindex="0" aria-expanded="false">
+          <div class="card-icon">✈️</div>
+          <div class="card-intro">
+            <h3>Play, Travel &amp; Exploration</h3>
+            <p class="card-headline">Living abroad significantly increases creativity. Play activates <strong>the same brain networks required for learning</strong>. Novel environments rewire the brain faster than repetition.</p>
+          </div>
+          <div class="card-toggle"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div>
+        </div>
+        <div class="card-body"><div class="studies-grid">
+          <div class="study"><div class="study-badge">LANDMARK</div>
+            <h4>Cultural Borders and Mental Barriers: Living Abroad and Creativity</h4>
+            <p class="study-meta">Maddux &amp; Galinsky · <em>Journal of Personality and Social Psychology</em> · 2009</p>
+            <p class="study-finding">Five studies: <strong>living abroad significantly increases creativity</strong> across insight, association, and generation measures.</p>
+            <a href="https://www.apa.org/pubs/journals/releases/psp9651047.pdf" target="_blank" rel="noopener" class="study-link">Read the full study →</a>
+          </div>
+          <div class="study">
+            <h4>Play, Attention, and Learning</h4>
+            <p class="study-meta">Hillman, Pontifex et al. · <em>Annals of the New York Academy of Sciences</em> · 2012</p>
+            <p class="study-finding">Play-based activities activate <strong>the same attention and executive function networks</strong> required for learning. Play is a neurologically optimized form of learning.</p>
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3842829/" target="_blank" rel="noopener" class="study-link">Read the full study →</a>
+          </div>
+          <div class="study">
+            <h4>Enhancing Quality of Life through Travel, Happiness, and Resilience</h4>
+            <p class="study-meta"><em>Journal of Travel Research</em> · 2024</p>
+            <p class="study-finding">Travel frequency predicts <strong>higher quality of life</strong>, mediated by happiness and psychological resilience.</p>
+            <a href="https://journals.sagepub.com/doi/10.1177/00472875241288481" target="_blank" rel="noopener" class="study-link">Read the full study →</a>
+          </div>
+        </div></div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- THE CONVERGENCE -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section id="convergence" class="parallax-section">
+    <div class="container">
+      <div class="convergence-block" data-animate="fade-up">
+        <h2>Dance is the <em>only</em> activity that engages all thirteen domains simultaneously.</h2>
+        <div class="convergence-tags">
+          <span>Brain Health</span>
+          <span>Mental Health</span>
+          <span>Women's Health</span>
+          <span>Men's Health</span>
+          <span>Attraction</span>
+          <span>Partnership</span>
+          <span>Community</span>
+          <span>Movement</span>
+          <span>Music</span>
+          <span>Aging</span>
+          <span>Touch</span>
+          <span>Mindfulness</span>
+          <span>Play</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- BY THE NUMBERS -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section class="parallax-section">
+    <div class="container">
+      <div class="stats-ribbon" data-animate="fade-up">
+        <div class="ribbon-stat"><span class="big">53</span><span class="label">Peer-Reviewed Studies</span></div>
+        <div class="ribbon-stat"><span class="big">13</span><span class="label">Health Domains</span></div>
+        <div class="ribbon-stat"><span class="big">9</span><span class="label">Essential Books</span></div>
+        <div class="ribbon-stat"><span class="big">30+</span><span class="label">Journals Cited</span></div>
+        <div class="ribbon-stat"><span class="big">85</span><span class="label">Years of Research</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- THE LIBRARY -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section id="library" class="parallax-section">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <p class="section-eyebrow">Essential Reading</p>
+        <h2 class="section-title">The Library</h2>
+        <p class="section-intro">The definitive books behind the science — from researchers who dedicated their lives to these questions.</p>
+      </div>
+
+      <div class="books-grid">
+
+        <div class="book-card" data-animate="fade-up">
+          <div class="book-category">Movement &amp; The Brain</div>
+          <h3>Spark: The Revolutionary New Science of Exercise and the Brain</h3>
+          <p class="book-author">John J. Ratey, MD — Harvard Medical School · 2008</p>
+          <blockquote>"Exercise is the single most powerful tool you have to optimize your brain function… it's like Miracle-Gro for the brain."</blockquote>
+          <a href="https://www.amazon.com/Spark-Revolutionary-Science-Exercise-Brain/dp/0316113514" target="_blank" rel="noopener" class="book-link">View Book →</a>
+        </div>
+
+        <div class="book-card" data-animate="fade-up">
+          <div class="book-category">Relationships &amp; Happiness</div>
+          <h3>The Good Life: Lessons From the World's Longest Scientific Study of Happiness</h3>
+          <p class="book-author">Robert Waldinger, MD &amp; Marc Schulz, PhD — Harvard · 2023</p>
+          <blockquote>"The people who were the most satisfied in their relationships at age 50 were the healthiest at age 80."</blockquote>
+          <a href="https://www.amazon.com/Good-Life-Lessons-Longest-Scientific/dp/198216669X" target="_blank" rel="noopener" class="book-link">View Book →</a>
+        </div>
+
+        <div class="book-card" data-animate="fade-up">
+          <div class="book-category">The Science of Play</div>
+          <h3>Play: How it Shapes the Brain, Opens the Imagination, and Invigorates the Soul</h3>
+          <p class="book-author">Stuart Brown, MD — National Institute for Play · 2009</p>
+          <blockquote>"Nothing lights up the brain like play. Three-dimensional play fires up the cerebellum, puts a lot of impulses into the frontal lobe — the executive portion — helps contextual memory be developed, and… and, and, and."</blockquote>
+          <a href="https://www.amazon.com/Play-Shapes-Brain-Imagination-Invigorates/dp/1583333789" target="_blank" rel="noopener" class="book-link">View Book →</a>
+        </div>
+
+        <div class="book-card" data-animate="fade-up">
+          <div class="book-category">Music &amp; Neuroscience</div>
+          <h3>This Is Your Brain on Music: The Science of a Human Obsession</h3>
+          <p class="book-author">Daniel J. Levitin, PhD — McGill University · 2006</p>
+          <blockquote>"Music is not simply a distraction or a luxury. It is a core element of our identity as a species, an activity that paved the way for more complex behaviors such as language."</blockquote>
+          <a href="https://www.amazon.com/This-Your-Brain-Music-Obsession/dp/0452288525" target="_blank" rel="noopener" class="book-link">View Book →</a>
+        </div>
+
+        <div class="book-card" data-animate="fade-up">
+          <div class="book-category">Community &amp; Longevity</div>
+          <h3>The Blue Zones: Lessons for Living Longer From the People Who've Lived the Longest</h3>
+          <p class="book-author">Dan Buettner — National Geographic Fellow · 2008</p>
+          <blockquote>"The world's longest-lived people chose — or were born into — social circles that supported healthy behaviors. Okinawans created moais — groups of five friends that committed to each other for life."</blockquote>
+          <a href="https://www.amazon.com/Blue-Zones-Lessons-Living-Longest/dp/1426207557" target="_blank" rel="noopener" class="book-link">View Book →</a>
+        </div>
+
+        <div class="book-card" data-animate="fade-up">
+          <div class="book-category">Mindfulness</div>
+          <h3>Full Catastrophe Living: Using the Wisdom of Your Body and Mind to Face Stress, Pain, and Illness</h3>
+          <p class="book-author">Jon Kabat-Zinn, PhD — UMass Medical School · 1990</p>
+          <blockquote>"You can't stop the waves, but you can learn to surf."</blockquote>
+          <a href="https://www.amazon.com/Full-Catastrophe-Living-Revised-Illness/dp/0345536932" target="_blank" rel="noopener" class="book-link">View Book →</a>
+        </div>
+
+        <div class="book-card" data-animate="fade-up">
+          <div class="book-category">Healthy Expression</div>
+          <h3>Opening Up by Writing It Down: How Expressive Writing Improves Health and Eases Emotional Pain</h3>
+          <p class="book-author">James W. Pennebaker, PhD &amp; Joshua M. Smyth, PhD · 2016</p>
+          <blockquote>"When people transform their feelings and thoughts about personally upsetting experiences into language, their physical and mental health improve markedly."</blockquote>
+          <a href="https://www.amazon.com/Opening-Writing-Down-Third-Expressive/dp/146251109X" target="_blank" rel="noopener" class="book-link">View Book →</a>
+        </div>
+
+        <div class="book-card" data-animate="fade-up">
+          <div class="book-category">Dance &amp; Collective Joy</div>
+          <h3>Dancing in the Streets: A History of Collective Joy</h3>
+          <p class="book-author">Barbara Ehrenreich, PhD · 2006</p>
+          <blockquote>"In much of the world, the weights of social hierarchy, of gender and racial oppression, of poverty and monotony, were regularly lifted in communal celebration."</blockquote>
+          <a href="https://www.amazon.com/Dancing-Streets-History-Collective-Joy/dp/0805057242" target="_blank" rel="noopener" class="book-link">View Book →</a>
+        </div>
+
+        <div class="book-card" data-animate="fade-up">
+          <div class="book-category">Embodiment &amp; Healing</div>
+          <h3>The Body Keeps the Score: Brain, Mind, and Body in the Healing of Trauma</h3>
+          <p class="book-author">Bessel van der Kolk, MD — Boston University · 2014</p>
+          <blockquote>"The body keeps the score. If the memory of trauma is encoded in the viscera… then the pathway to recovery is found not through talking but through allowing the body to have experiences that deeply and viscerally contradict the helplessness, rage, or collapse that result from trauma."</blockquote>
+          <a href="https://www.amazon.com/Body-Keeps-Score-Healing-Trauma/dp/0143127748" target="_blank" rel="noopener" class="book-link">View Book →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- CLOSING -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section id="join" class="parallax-section">
+    <div class="container">
+      <div class="closing-block" data-animate="fade-up">
+        <h2>Dancing isn't just exercise.<br>It's how humans were <em>designed</em> to feel alive.</h2>
+        <p>
+          Every culture in human history has danced. It is one of the oldest, most universal human behaviors — predating written language, agriculture, and organized religion. The research on this page represents decades of scientific inquiry into something our bodies have always known: 
+          movement, music, touch, and togetherness are not luxuries. They are biological necessities.
+        </p>
+        <p>
+          Whether you dance in your kitchen, at a studio, or under the open sky — the science says the same thing: it will make you healthier, happier, sharper, and more connected. That's not a sales pitch. That's peer-reviewed fact.
+        </p>
+        <a href="https://soulcoast.dance" class="closing-link">Visit soulcoast.dance →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- ABOUT THIS RESOURCE -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section id="about" class="parallax-section">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <p class="section-eyebrow">Methodology</p>
+        <h2 class="section-title">About This Resource</h2>
+      </div>
+      <div class="about-grid" data-animate="fade-up">
+        <div class="about-card">
+          <h3>Curation Standards</h3>
+          <p>Every study on this page is sourced from peer-reviewed journals indexed in PubMed, PubMed Central, or equivalent academic databases. We prioritize meta-analyses, systematic reviews, and randomized controlled trials. Each link goes directly to the original publication.</p>
+        </div>
+        <div class="about-card">
+          <h3>Living Document</h3>
+          <p>This encyclopedia is continuously updated as new research is published. If you know of a study that should be included, or find a broken link, we welcome contributions. Our goal is to be the most comprehensive and accurate dance-health resource available.</p>
+        </div>
+        <div class="about-card">
+          <h3>Not Medical Advice</h3>
+          <p>This resource is for educational and informational purposes only. The studies presented here represent current scientific understanding but should not substitute professional medical advice. Always consult a healthcare provider for personal health decisions.</p>
+        </div>
+        <div class="about-card">
+          <h3>A Soul Coast Project</h3>
+          <p>Built as a companion resource for the Soul Coast Dance community. We believe the best way to inspire people to move is to share the truth about what happens when they do. No hype needed — the science speaks for itself.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Soul Coast Dance · A companion resource for <a href="https://soulcoast.dance" style="color:var(--accent-warm);text-decoration:none;">soulcoast.dance</a> · All studies are peer-reviewed and publicly accessible</p>
+    </div>
+  </footer>
+
+  <!-- Scripts: CDNs for Three.js and GSAP (optional enhancements) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- Particles (inline) -->
+  <script>
+(function () {
+  try {
+    if (typeof THREE === 'undefined') return;
+    var canvas = document.getElementById('bg-canvas');
+    if (!canvas) return;
+    var renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    var scene = new THREE.Scene();
+    var camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
+    camera.position.z = 50;
+    var COUNT = 1500, spread = 120;
+    var positions = new Float32Array(COUNT * 3);
+    var velocities = new Float32Array(COUNT * 3);
+    var sizes = new Float32Array(COUNT);
+    for (var i = 0; i < COUNT; i++) {
+      var i3 = i * 3;
+      positions[i3] = (Math.random() - 0.5) * spread;
+      positions[i3+1] = (Math.random() - 0.5) * spread;
+      positions[i3+2] = (Math.random() - 0.5) * spread - 20;
+      velocities[i3] = (Math.random() - 0.5) * 0.01;
+      velocities[i3+1] = (Math.random() - 0.5) * 0.01;
+      velocities[i3+2] = (Math.random() - 0.5) * 0.005;
+      sizes[i] = Math.random() * 2.5 + 0.5;
+    }
+    var geo = new THREE.BufferGeometry();
+    geo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+    geo.setAttribute('size', new THREE.BufferAttribute(sizes, 1));
+    var mat = new THREE.ShaderMaterial({
+      uniforms: { uScrollY:{value:0}, uTime:{value:0}, uColor1:{value:new THREE.Color(0xe8734a)}, uColor2:{value:new THREE.Color(0x7b8cde)} },
+      vertexShader: 'attribute float size; varying float vOp; uniform float uScrollY; uniform float uTime; void main(){ vec3 p=position; p.y+=sin(uTime*0.3+p.x*0.05)*1.5; p.x+=cos(uTime*0.2+p.z*0.05)*1.0; p.y-=uScrollY*0.015; vec4 mv=modelViewMatrix*vec4(p,1.0); gl_PointSize=size*(50.0/-mv.z); gl_Position=projectionMatrix*mv; vOp=smoothstep(80.0,20.0,length(mv.xyz))*0.5; }',
+      fragmentShader: 'varying float vOp; uniform vec3 uColor1; uniform vec3 uColor2; uniform float uTime; void main(){ float d=length(gl_PointCoord-vec2(0.5)); if(d>0.5) discard; float a=smoothstep(0.5,0.1,d)*vOp; vec3 c=mix(uColor1,uColor2,sin(uTime*0.5)*0.5+0.5); gl_FragColor=vec4(c,a); }',
+      transparent: true, depthWrite: false, blending: THREE.AdditiveBlending
+    });
+    var pts = new THREE.Points(geo, mat);
+    scene.add(pts);
+    var scrollY = 0, mx = 0, my = 0, tmx = 0, tmy = 0;
+    window.addEventListener('scroll', function(){ scrollY = window.pageYOffset; }, {passive:true});
+    window.addEventListener('mousemove', function(e){ tmx=(e.clientX/window.innerWidth-0.5)*2; tmy=(e.clientY/window.innerHeight-0.5)*2; }, {passive:true});
+    window.addEventListener('resize', function(){ camera.aspect=window.innerWidth/window.innerHeight; camera.updateProjectionMatrix(); renderer.setSize(window.innerWidth,window.innerHeight); });
+    var clock = new THREE.Clock();
+    function animate() {
+      requestAnimationFrame(animate);
+      var t = clock.getElapsedTime();
+      mx += (tmx-mx)*0.05; my += (tmy-my)*0.05;
+      mat.uniforms.uScrollY.value = scrollY;
+      mat.uniforms.uTime.value = t;
+      pts.rotation.y = mx*0.15 + t*0.02;
+      pts.rotation.x = my*0.08;
+      var pa = geo.attributes.position;
+      for(var j=0;j<COUNT;j++){ var j3=j*3; pa.array[j3]+=velocities[j3]; pa.array[j3+1]+=velocities[j3+1]; pa.array[j3+2]+=velocities[j3+2]; if(Math.abs(pa.array[j3])>spread/2)velocities[j3]*=-1; if(Math.abs(pa.array[j3+1])>spread/2)velocities[j3+1]*=-1; if(Math.abs(pa.array[j3+2])>spread/2)velocities[j3+2]*=-1; }
+      pa.needsUpdate = true;
+      var fade = Math.max(0, 1-scrollY/(window.innerHeight*2));
+      renderer.domElement.style.opacity = Math.max(0.15, fade);
+      renderer.render(scene, camera);
+    }
+    animate();
+  } catch(e) { console.log('Particles skipped:', e.message); }
+})();
+  </script>
+
+  <!-- App Logic (inline) -->
+  <script>
+(function () {
+  'use strict';
+
+  /* NAV SCROLL */
+  var nav = document.getElementById('main-nav');
+  window.addEventListener('scroll', function() {
+    if (window.pageYOffset > 80) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  }, {passive:true});
+
+  /* EXPANDABLE CARDS */
+  document.querySelectorAll('.card-header').forEach(function(header) {
+    header.addEventListener('click', function() {
+      var card = header.closest('.science-card');
+      var isActive = card.classList.contains('active');
+      document.querySelectorAll('.science-card.active').forEach(function(c) {
+        if (c !== card) c.classList.remove('active');
+      });
+      card.classList.toggle('active');
+      header.setAttribute('aria-expanded', !isActive);
+      if (!isActive) {
+        setTimeout(function() { card.scrollIntoView({behavior:'smooth',block:'nearest'}); }, 100);
+      }
+    });
+    header.addEventListener('keydown', function(e) {
+      if (e.key==='Enter'||e.key===' ') { e.preventDefault(); header.click(); }
+    });
+  });
+
+  /* SCROLL REVEAL */
+  var animEls = document.querySelectorAll('[data-animate]');
+  if ('IntersectionObserver' in window) {
+    var obs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+          obs.unobserve(entry.target);
+        }
+      });
+    }, {rootMargin:'0px 0px -40px 0px', threshold:0.1});
+    animEls.forEach(function(el) {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(30px)';
+      el.style.transition = 'opacity 0.8s cubic-bezier(0.16,1,0.3,1), transform 0.8s cubic-bezier(0.16,1,0.3,1)';
+      obs.observe(el);
+    });
+  }
+
+  /* HERO COUNTER */
+  var statEl = document.querySelector('.stat-number[data-count]');
+  if (statEl && 'IntersectionObserver' in window) {
+    var target = parseInt(statEl.getAttribute('data-count'), 10);
+    var counted = false;
+    var sObs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting && !counted) {
+          counted = true;
+          var start = performance.now();
+          function update(now) {
+            var p = Math.min((now-start)/2000, 1);
+            var ease = 1 - Math.pow(1-p, 4);
+            statEl.textContent = Math.round(target * ease);
+            if (p < 1) requestAnimationFrame(update);
+          }
+          requestAnimationFrame(update);
+          sObs.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.5});
+    sObs.observe(statEl);
+  }
+
+  /* GSAP (if loaded) */
+  if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.to('.hero-content', { y:-100, opacity:0.3, ease:'none', scrollTrigger:{trigger:'#hero',start:'top top',end:'bottom top',scrub:1} });
+    gsap.from('.convergence-tags span', { y:30, opacity:0, stagger:0.08, duration:0.8, ease:'power3.out', scrollTrigger:{trigger:'.convergence-tags',start:'top 80%',toggleActions:'play none none none'} });
+  }
+
+  /* SMOOTH SCROLL */
+  document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      var t = document.querySelector(this.getAttribute('href'));
+      if (t) { e.preventDefault(); t.scrollIntoView({behavior:'smooth',block:'start'}); }
+    });
+  });
+})();
+  </script>
+</body>
+</html>
