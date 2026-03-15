@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Soul Coast Dance — The Science of Moving Together</title>
-  <meta name="description" content="Soul Coast Dance: Community dance lessons backed by cutting-edge science. Discover why dancing transforms your brain, body, and life.">
+  <meta name="description" content="The Dance &amp; Health Encyclopedia by Soul Coast. 50+ peer-reviewed studies across 13 domains of human health proving dance transforms your brain, body, and life.">
   <meta name="theme-color" content="#06060b">
   <meta property="og:title" content="Soul Coast Dance — The Science of Moving Together">
   <meta property="og:description" content="50+ peer-reviewed studies across 13 domains proving dance transforms your brain, body, and life. The most comprehensive dance-health research database online.">
@@ -123,14 +123,17 @@ body { font-family: var(--font-sans); background: var(--bg-deep); color: var(--t
 .convergence-tags span:hover { border-color: var(--accent-warm); color: var(--accent-warm); box-shadow: 0 0 30px var(--glow-warm); }
 
 /* BOOKS */
-.books-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; padding-bottom: 6rem; }
-.book-card { padding: 2rem; border: 1px solid var(--border-subtle); border-radius: 16px; background: var(--bg-card); transition: all 0.4s var(--ease-out-expo); display: flex; flex-direction: column; }
-.book-card:hover { border-color: rgba(255, 255, 255, 0.1); transform: translateY(-4px); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); }
-.book-category { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent-blue); margin-bottom: 0.75rem; }
-.book-card h3 { font-family: var(--font-serif); font-size: 1.15rem; font-weight: 700; line-height: 1.35; margin-bottom: 0.5rem; }
-.book-author { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1.25rem; }
-.book-card blockquote { font-size: 0.9rem; font-style: italic; color: var(--text-secondary); line-height: 1.7; padding-left: 1.25rem; border-left: 2px solid var(--accent-warm); margin-bottom: 1.5rem; flex: 1; }
-.book-link { display: inline-flex; font-size: 0.8rem; font-weight: 600; color: var(--accent-warm); text-decoration: none; transition: all 0.3s; }
+.books-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; padding-bottom: 6rem; }
+.book-card { padding: 1.75rem; border: 1px solid var(--border-subtle); border-radius: 16px; background: var(--bg-card); transition: all 0.4s var(--ease-out-expo); display: flex; flex-direction: row; gap: 1.5rem; align-items: flex-start; }
+.book-card:hover { border-color: rgba(255, 255, 255, 0.1); transform: translateY(-3px); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); }
+.book-cover { width: 100px; min-width: 100px; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.4); flex-shrink: 0; }
+.book-cover img { width: 100%; height: auto; display: block; }
+.book-info { flex: 1; display: flex; flex-direction: column; min-width: 0; }
+.book-category { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent-blue); margin-bottom: 0.5rem; }
+.book-card h3 { font-family: var(--font-serif); font-size: 1.05rem; font-weight: 700; line-height: 1.35; margin-bottom: 0.4rem; }
+.book-author { font-size: 0.75rem; color: var(--text-muted); margin-bottom: 1rem; }
+.book-card blockquote { font-size: 0.85rem; font-style: italic; color: var(--text-secondary); line-height: 1.65; padding-left: 1rem; border-left: 2px solid var(--accent-warm); margin-bottom: 1rem; flex: 1; }
+.book-link { display: inline-flex; font-size: 0.78rem; font-weight: 600; color: var(--accent-warm); text-decoration: none; transition: all 0.3s; }
 .book-link:hover { color: var(--text-primary); }
 
 /* STATS RIBBON */
@@ -226,10 +229,11 @@ footer p { font-size: 0.8rem; color: var(--text-muted); line-height: 1.6; }
 
   /* BOOKS */
   .books-grid { grid-template-columns: 1fr; gap: 1rem; padding-bottom: 3rem; }
-  .book-card { padding: 1.5rem 1.25rem; border-radius: 12px; }
-  .book-card h3 { font-size: 1rem; }
-  .book-card blockquote { font-size: 0.82rem; padding-left: 1rem; }
-  .book-author { font-size: 0.72rem; }
+  .book-card { padding: 1.25rem; border-radius: 12px; gap: 1rem; }
+  .book-cover { width: 80px; min-width: 80px; }
+  .book-card h3 { font-size: 0.95rem; }
+  .book-card blockquote { font-size: 0.8rem; padding-left: 0.85rem; line-height: 1.6; }
+  .book-author { font-size: 0.7rem; margin-bottom: 0.75rem; }
 
   /* CLOSING */
   #join { padding: 5rem 0 4rem; }
@@ -260,6 +264,8 @@ footer p { font-size: 0.8rem; color: var(--text-muted); line-height: 1.6; }
   .stats-ribbon { grid-template-columns: repeat(2, 1fr); }
   .ribbon-stat:last-child { grid-column: 1 / -1; }
   .nav-links a:not(.nav-cta) { display: none; }
+  .book-cover { width: 70px; min-width: 70px; }
+  .book-card h3 { font-size: 0.9rem; }
 }
 
 /* ═══════════════════════════════════════════
@@ -900,75 +906,102 @@ footer p { font-size: 0.8rem; color: var(--text-muted); line-height: 1.6; }
       <div class="books-grid">
 
         <div class="book-card" data-animate="fade-up">
-          <div class="book-category">Movement &amp; The Brain</div>
-          <h3>Spark: The Revolutionary New Science of Exercise and the Brain</h3>
-          <p class="book-author">John J. Ratey, MD — Harvard Medical School · 2008</p>
-          <blockquote>"Exercise is the single most powerful tool you have to optimize your brain function… it's like Miracle-Gro for the brain."</blockquote>
-          <a href="https://www.amazon.com/Spark-Revolutionary-Science-Exercise-Brain/dp/0316113514" target="_blank" rel="noopener" class="book-link">View Book →</a>
+          <div class="book-cover"><img src="https://covers.openlibrary.org/b/isbn/0316113514-L.jpg" alt="Spark book cover" loading="lazy"></div>
+          <div class="book-info">
+            <div class="book-category">Movement &amp; The Brain</div>
+            <h3>Spark: The Revolutionary New Science of Exercise and the Brain</h3>
+            <p class="book-author">John J. Ratey, MD — Harvard Medical School · 2008</p>
+            <blockquote>"Exercise is the single most powerful tool you have to optimize your brain function… it's like Miracle-Gro for the brain."</blockquote>
+            <a href="https://www.amazon.com/Spark-Revolutionary-Science-Exercise-Brain/dp/0316113514" target="_blank" rel="noopener" class="book-link">View Book →</a>
+          </div>
         </div>
 
         <div class="book-card" data-animate="fade-up">
-          <div class="book-category">Relationships &amp; Happiness</div>
-          <h3>The Good Life: Lessons From the World's Longest Scientific Study of Happiness</h3>
-          <p class="book-author">Robert Waldinger, MD &amp; Marc Schulz, PhD — Harvard · 2023</p>
-          <blockquote>"The people who were the most satisfied in their relationships at age 50 were the healthiest at age 80."</blockquote>
-          <a href="https://www.amazon.com/Good-Life-Lessons-Longest-Scientific/dp/198216669X" target="_blank" rel="noopener" class="book-link">View Book →</a>
+          <div class="book-cover"><img src="https://covers.openlibrary.org/b/isbn/198216669X-L.jpg" alt="The Good Life book cover" loading="lazy"></div>
+          <div class="book-info">
+            <div class="book-category">Relationships &amp; Happiness</div>
+            <h3>The Good Life: Lessons From the World's Longest Scientific Study of Happiness</h3>
+            <p class="book-author">Robert Waldinger, MD &amp; Marc Schulz, PhD — Harvard · 2023</p>
+            <blockquote>"The people who were the most satisfied in their relationships at age 50 were the healthiest at age 80."</blockquote>
+            <a href="https://www.amazon.com/Good-Life-Lessons-Longest-Scientific/dp/198216669X" target="_blank" rel="noopener" class="book-link">View Book →</a>
+          </div>
         </div>
 
         <div class="book-card" data-animate="fade-up">
-          <div class="book-category">The Science of Play</div>
-          <h3>Play: How it Shapes the Brain, Opens the Imagination, and Invigorates the Soul</h3>
-          <p class="book-author">Stuart Brown, MD — National Institute for Play · 2009</p>
-          <blockquote>"Nothing lights up the brain like play. Three-dimensional play fires up the cerebellum, puts a lot of impulses into the frontal lobe — the executive portion — helps contextual memory be developed, and… and, and, and."</blockquote>
-          <a href="https://www.amazon.com/Play-Shapes-Brain-Imagination-Invigorates/dp/1583333789" target="_blank" rel="noopener" class="book-link">View Book →</a>
+          <div class="book-cover"><img src="https://covers.openlibrary.org/b/isbn/1583333789-L.jpg" alt="Play book cover" loading="lazy"></div>
+          <div class="book-info">
+            <div class="book-category">The Science of Play</div>
+            <h3>Play: How it Shapes the Brain, Opens the Imagination, and Invigorates the Soul</h3>
+            <p class="book-author">Stuart Brown, MD — National Institute for Play · 2009</p>
+            <blockquote>"Nothing lights up the brain like play. Three-dimensional play fires up the cerebellum, puts a lot of impulses into the frontal lobe — the executive portion — helps contextual memory be developed."</blockquote>
+            <a href="https://www.amazon.com/Play-Shapes-Brain-Imagination-Invigorates/dp/1583333789" target="_blank" rel="noopener" class="book-link">View Book →</a>
+          </div>
         </div>
 
         <div class="book-card" data-animate="fade-up">
-          <div class="book-category">Music &amp; Neuroscience</div>
-          <h3>This Is Your Brain on Music: The Science of a Human Obsession</h3>
-          <p class="book-author">Daniel J. Levitin, PhD — McGill University · 2006</p>
-          <blockquote>"Music is not simply a distraction or a luxury. It is a core element of our identity as a species, an activity that paved the way for more complex behaviors such as language."</blockquote>
-          <a href="https://www.amazon.com/This-Your-Brain-Music-Obsession/dp/0452288525" target="_blank" rel="noopener" class="book-link">View Book →</a>
+          <div class="book-cover"><img src="https://covers.openlibrary.org/b/isbn/0452288525-L.jpg" alt="This Is Your Brain on Music book cover" loading="lazy"></div>
+          <div class="book-info">
+            <div class="book-category">Music &amp; Neuroscience</div>
+            <h3>This Is Your Brain on Music: The Science of a Human Obsession</h3>
+            <p class="book-author">Daniel J. Levitin, PhD — McGill University · 2006</p>
+            <blockquote>"Music is not simply a distraction or a luxury. It is a core element of our identity as a species, an activity that paved the way for more complex behaviors such as language."</blockquote>
+            <a href="https://www.amazon.com/This-Your-Brain-Music-Obsession/dp/0452288525" target="_blank" rel="noopener" class="book-link">View Book →</a>
+          </div>
         </div>
 
         <div class="book-card" data-animate="fade-up">
-          <div class="book-category">Community &amp; Longevity</div>
-          <h3>The Blue Zones: Lessons for Living Longer From the People Who've Lived the Longest</h3>
-          <p class="book-author">Dan Buettner — National Geographic Fellow · 2008</p>
-          <blockquote>"The world's longest-lived people chose — or were born into — social circles that supported healthy behaviors. Okinawans created moais — groups of five friends that committed to each other for life."</blockquote>
-          <a href="https://www.amazon.com/Blue-Zones-Lessons-Living-Longest/dp/1426207557" target="_blank" rel="noopener" class="book-link">View Book →</a>
+          <div class="book-cover"><img src="https://covers.openlibrary.org/b/isbn/1426207557-L.jpg" alt="The Blue Zones book cover" loading="lazy"></div>
+          <div class="book-info">
+            <div class="book-category">Community &amp; Longevity</div>
+            <h3>The Blue Zones: Lessons for Living Longer From the People Who've Lived the Longest</h3>
+            <p class="book-author">Dan Buettner — National Geographic Fellow · 2008</p>
+            <blockquote>"The world's longest-lived people chose — or were born into — social circles that supported healthy behaviors."</blockquote>
+            <a href="https://www.amazon.com/Blue-Zones-Lessons-Living-Longest/dp/1426207557" target="_blank" rel="noopener" class="book-link">View Book →</a>
+          </div>
         </div>
 
         <div class="book-card" data-animate="fade-up">
-          <div class="book-category">Mindfulness</div>
-          <h3>Full Catastrophe Living: Using the Wisdom of Your Body and Mind to Face Stress, Pain, and Illness</h3>
-          <p class="book-author">Jon Kabat-Zinn, PhD — UMass Medical School · 1990</p>
-          <blockquote>"You can't stop the waves, but you can learn to surf."</blockquote>
-          <a href="https://www.amazon.com/Full-Catastrophe-Living-Revised-Illness/dp/0345536932" target="_blank" rel="noopener" class="book-link">View Book →</a>
+          <div class="book-cover"><img src="https://covers.openlibrary.org/b/isbn/0345536932-L.jpg" alt="Full Catastrophe Living book cover" loading="lazy"></div>
+          <div class="book-info">
+            <div class="book-category">Mindfulness</div>
+            <h3>Full Catastrophe Living: Using the Wisdom of Your Body and Mind to Face Stress, Pain, and Illness</h3>
+            <p class="book-author">Jon Kabat-Zinn, PhD — UMass Medical School · 1990</p>
+            <blockquote>"You can't stop the waves, but you can learn to surf."</blockquote>
+            <a href="https://www.amazon.com/Full-Catastrophe-Living-Revised-Illness/dp/0345536932" target="_blank" rel="noopener" class="book-link">View Book →</a>
+          </div>
         </div>
 
         <div class="book-card" data-animate="fade-up">
-          <div class="book-category">Healthy Expression</div>
-          <h3>Opening Up by Writing It Down: How Expressive Writing Improves Health and Eases Emotional Pain</h3>
-          <p class="book-author">James W. Pennebaker, PhD &amp; Joshua M. Smyth, PhD · 2016</p>
-          <blockquote>"When people transform their feelings and thoughts about personally upsetting experiences into language, their physical and mental health improve markedly."</blockquote>
-          <a href="https://www.amazon.com/Opening-Writing-Down-Third-Expressive/dp/146251109X" target="_blank" rel="noopener" class="book-link">View Book →</a>
+          <div class="book-cover"><img src="https://covers.openlibrary.org/b/isbn/146251109X-L.jpg" alt="Opening Up by Writing It Down book cover" loading="lazy"></div>
+          <div class="book-info">
+            <div class="book-category">Healthy Expression</div>
+            <h3>Opening Up by Writing It Down: How Expressive Writing Improves Health and Eases Emotional Pain</h3>
+            <p class="book-author">James W. Pennebaker, PhD &amp; Joshua M. Smyth, PhD · 2016</p>
+            <blockquote>"When people transform their feelings and thoughts about personally upsetting experiences into language, their physical and mental health improve markedly."</blockquote>
+            <a href="https://www.amazon.com/Opening-Writing-Down-Third-Expressive/dp/146251109X" target="_blank" rel="noopener" class="book-link">View Book →</a>
+          </div>
         </div>
 
         <div class="book-card" data-animate="fade-up">
-          <div class="book-category">Dance &amp; Collective Joy</div>
-          <h3>Dancing in the Streets: A History of Collective Joy</h3>
-          <p class="book-author">Barbara Ehrenreich, PhD · 2006</p>
-          <blockquote>"In much of the world, the weights of social hierarchy, of gender and racial oppression, of poverty and monotony, were regularly lifted in communal celebration."</blockquote>
-          <a href="https://www.amazon.com/Dancing-Streets-History-Collective-Joy/dp/0805057242" target="_blank" rel="noopener" class="book-link">View Book →</a>
+          <div class="book-cover"><img src="https://covers.openlibrary.org/b/isbn/0805057242-L.jpg" alt="Dancing in the Streets book cover" loading="lazy"></div>
+          <div class="book-info">
+            <div class="book-category">Dance &amp; Collective Joy</div>
+            <h3>Dancing in the Streets: A History of Collective Joy</h3>
+            <p class="book-author">Barbara Ehrenreich, PhD · 2006</p>
+            <blockquote>"In much of the world, the weights of social hierarchy, of gender and racial oppression, of poverty and monotony, were regularly lifted in communal celebration."</blockquote>
+            <a href="https://www.amazon.com/Dancing-Streets-History-Collective-Joy/dp/0805057242" target="_blank" rel="noopener" class="book-link">View Book →</a>
+          </div>
         </div>
 
         <div class="book-card" data-animate="fade-up">
-          <div class="book-category">Embodiment &amp; Healing</div>
-          <h3>The Body Keeps the Score: Brain, Mind, and Body in the Healing of Trauma</h3>
-          <p class="book-author">Bessel van der Kolk, MD — Boston University · 2014</p>
-          <blockquote>"The body keeps the score. If the memory of trauma is encoded in the viscera… then the pathway to recovery is found not through talking but through allowing the body to have experiences that deeply and viscerally contradict the helplessness, rage, or collapse that result from trauma."</blockquote>
-          <a href="https://www.amazon.com/Body-Keeps-Score-Healing-Trauma/dp/0143127748" target="_blank" rel="noopener" class="book-link">View Book →</a>
+          <div class="book-cover"><img src="https://covers.openlibrary.org/b/isbn/0143127748-L.jpg" alt="The Body Keeps the Score book cover" loading="lazy"></div>
+          <div class="book-info">
+            <div class="book-category">Embodiment &amp; Healing</div>
+            <h3>The Body Keeps the Score: Brain, Mind, and Body in the Healing of Trauma</h3>
+            <p class="book-author">Bessel van der Kolk, MD — Boston University · 2014</p>
+            <blockquote>"The pathway to recovery is found not through talking but through allowing the body to have experiences that deeply and viscerally contradict the helplessness, rage, or collapse that result from trauma."</blockquote>
+            <a href="https://www.amazon.com/Body-Keeps-Score-Healing-Trauma/dp/0143127748" target="_blank" rel="noopener" class="book-link">View Book →</a>
+          </div>
         </div>
 
       </div>
@@ -987,7 +1020,7 @@ footer p { font-size: 0.8rem; color: var(--text-muted); line-height: 1.6; }
           movement, music, touch, and togetherness are not luxuries. They are biological necessities.
         </p>
         <p>
-          Whether you dance in your kitchen, at a studio, or under the open sky — the science says the same thing: it will make you healthier, happier, sharper, and more connected. That's not a sales pitch. That's peer-reviewed fact.
+          Whether you dance in your kitchen, at a studio, or under the open sky — the science confirms what every dancer already feels: it makes you healthier, happier, sharper, and more connected.
         </p>
         <a href="https://soulcoast.dance" class="closing-link">Visit soulcoast.dance →</a>
       </div>
